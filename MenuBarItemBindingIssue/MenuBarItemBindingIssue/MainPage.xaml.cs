@@ -1,4 +1,6 @@
-﻿namespace MenuBarItemBindingIssue;
+﻿using System.Diagnostics;
+
+namespace MenuBarItemBindingIssue;
 
 public partial class MainPage : ContentPage
 {
@@ -12,6 +14,8 @@ public partial class MainPage : ContentPage
 		// Workaround number 2
 		foreach (var menuBarItem in MenuBarItems)
 		{
+			Debug.WriteLine($"MenuBarItem {menuBarItem.Text} BindingContext = {menuBarItem.BindingContext}");
+			
 			if (menuBarItem.Text == "ViaCodeBehind")
 			{
 				menuBarItem.BindingContext = BindingContext;

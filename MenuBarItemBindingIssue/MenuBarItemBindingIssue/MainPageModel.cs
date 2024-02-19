@@ -7,7 +7,7 @@ namespace MenuBarItemBindingIssue;
 public partial class MainPageModel : ObservableObject
 {
 	[RelayCommand]
-	void FooBar()
+	void MenuItemClicked()
 	{
 		Debug.WriteLine("FooBar hit");
 		Debugger.Break();

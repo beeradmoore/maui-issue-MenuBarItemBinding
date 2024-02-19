@@ -7,18 +7,18 @@
              x:Name="thisPage">
     <ContentPage.MenuBarItems>
        
-        <MenuBarItem Text="NoChange" x:DataType="local:MainPageModel">
-            <MenuFlyoutItem Text="Bar" Command="{Binding FooBarCommand}" />
+        <MenuBarItem Text="NoChange">
+            <MenuFlyoutItem Text="Bar" Command="{Binding MenuItemClickedCommand}" />
         </MenuBarItem>
         
         <!-- workaround number 1 -->
-        <MenuBarItem Text="ViaXaml" x:DataType="local:MainPageModel" BindingContext="{Binding BindingContext, Source={x:Reference thisPage}}">
-            <MenuFlyoutItem Text="Bar" Command="{Binding FooBarCommand}" />
+        <MenuBarItem Text="ViaXaml" BindingContext="{Binding BindingContext, Source={x:Reference thisPage}}">
+            <MenuFlyoutItem Text="Bar" Command="{Binding MenuItemClickedCommand}" />
         </MenuBarItem>
         
         <!-- workaround number 2 -->
-        <MenuBarItem Text="ViaCodeBehind" x:DataType="local:MainPageModel">
-            <MenuFlyoutItem Text="Bar" Command="{Binding FooBarCommand}" />
+        <MenuBarItem Text="ViaCodeBehind">
+            <MenuFlyoutItem Text="Bar" Command="{Binding MenuItemClickedCommand}" />
         </MenuBarItem>
         
     </ContentPage.MenuBarItems>
